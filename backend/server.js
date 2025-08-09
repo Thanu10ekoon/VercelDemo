@@ -7,10 +7,8 @@ const PORT = process.env.PORT || 3001;
 // Middleware
 app.use(express.json());
 app.use(cors({
-  origin: process.env.NODE_ENV === 'production' 
-    ? ['https://your-frontend-domain.vercel.app'] 
-    : ['http://localhost:3000'],
-  credentials: true
+  origin: '*',
+  credentials: false
 }));
 
 // Hardcoded credentials
